@@ -4,6 +4,7 @@
  * @brief This is a hash table.
  * [NOTE:] Do not try to enter in ALL capital names !
  * [NOTE:] Do not enter in names with a space !
+ *
  * @version 0.1
  * @date 2021-02-22
  * @copyright Copyright (c) Braiden Gole 2021
