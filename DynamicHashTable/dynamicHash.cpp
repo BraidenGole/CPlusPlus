@@ -31,6 +31,8 @@ int main()
     std::string updateName = "";
     std::string deleteName = "";
 
+    int timesWhat = 1;
+    int oldSize = ZERO;
     int newSize = ZERO;
     unsigned int index = ZERO;
     int numberOfEntries = ZERO;
@@ -61,6 +63,7 @@ int main()
             
             index = operation->HashMethod(usersName, operation->GetSize());
             table[index] = operation->CreateEntry(table, usersName, operation->GetSize(), index);
+            ++numberOfEntries;
         }
         else if ((selection.compare("b")) __EQ__ ZERO)
         {   
@@ -88,14 +91,24 @@ int main()
         {
             std::cout << "\n\t\tNot a valid option !\n\n";
         }
-        ++numberOfEntries;
 
         // Do not overfill the hash table.
         if (numberOfEntries == EXPANDAT)
         {   
             std::cout << "\n\t\t------------------ Expanded ------------------\n\n";
-            newSize += FIXEDSIZE;
+
+            oldSize = FIXEDSIZE * timesWhat;
+            ++timesWhat;
+            newSize = FIXEDSIZE * timesWhat;
+
+            std::cout << newSize;
             operation->SetSize(newSize);
+            
+            // Expand the indices of the table starting from the end index of the previous expansion.
+            for (int currEndSize = oldSize; currEndSize <= operation->GetSize(); ++currEndSize)
+            {
+                table[currEndSize] = NULL;
+            }
             numberOfEntries = ZERO;
         }
     }
