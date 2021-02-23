@@ -101,7 +101,6 @@ int main()
             ++timesWhat;
             newSize = FIXEDSIZE * timesWhat;
 
-            std::cout << newSize;
             operation->SetSize(newSize);
             
             // Expand the indices of the table starting from the end index of the previous expansion.
