@@ -1,7 +1,7 @@
 The dynamic hash table is fixed !
 
 I did not add the logic of the expansion of the hash table by equating all new nodes
-to NULL creating more spacing in the table.
+to NULL creating more spaces in the table.
 
 There were also a few things out of place when it came to the expansion of the table
 but all should be working as of now.
