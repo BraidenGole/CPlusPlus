@@ -50,6 +50,12 @@ HashTable::~HashTable()
 HashNode* HashTable::CreateEntry(HashNode** table, std::string usersName, const int size, const int index)
 {    
     HashNode* newNode = new HashNode(usersName);
+    
+    if (newNode __EQ__ nullptr)
+    {
+        std::cerr << "Out of memory !";
+        return NULL;
+    }
 
     // When the entries are filled we have an if statement to filter out the empty enties.
     if (table[index] __EQ__ NULL)
