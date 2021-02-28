@@ -25,7 +25,6 @@
 #include <iostream>
 #include <vector>
 #include <queue>
-#include <list>
 
 // Header files.
 #include "bfsFunctions.h"
