@@ -37,6 +37,12 @@ int main()
 {   
     std::vector<int>* graph = new std::vector<int>[TOTALNUMBEROFNODES];
     std::vector<bool> visited;
+    
+    if (graph __EQ__ nullptr)
+    {
+        std::cerr << "Out of memory !";
+        return ERROR;
+    }
 
     // Mark all spots with (false) to mark the position empty.
     visited = MarkSpotsNotVisited(visited, TOTALNUMBEROFNODES);
