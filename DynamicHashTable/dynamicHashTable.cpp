@@ -81,6 +81,12 @@ HashNode* HashTable::CreateEntry(HashNode** table, std::string usersName, const 
 HashNode** HashTable::UpdateEntry(HashNode** table, std::string nameToUpdate, const int size)
 {   
     HashNode* newNameNode = new HashNode();
+    
+    if (newNameNode __EQ__ nullptr)
+    {
+        std::cerr << "Out of memory !";
+        return NULL;
+    }
 
     // Does the name even exists ? Is the position filled ?
     std::string newName = "";
