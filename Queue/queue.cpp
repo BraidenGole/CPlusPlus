@@ -67,7 +67,7 @@ int main()
     showQueue(storage);
 
     // Make sure to release dynamic resources !
-    delete[] operation;
+    delete operation;
     return 0;
 }
 
