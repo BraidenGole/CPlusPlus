@@ -21,6 +21,12 @@ int main()
 {   
     Queue* storage = NULL;
     Queue* operation = new Queue(SIZEOFQUEUE);
+    
+    if (operation == nullptr)
+    {
+        std::cerr << "Out of memory !";
+        return 1;
+    }
 
     int entry = 0;
     int countUntilBreak = 0;
