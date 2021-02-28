@@ -21,6 +21,18 @@ int main()
 {   
     HashNode** table = new HashNode*[FIXEDSIZE];
     HashTable* operation = new HashTable();
+    
+    if (table __EQ__ nullptr)
+    {
+        std::cerr << "Out of memory !";
+        return ERROR;
+    }
+
+    if (operation __EQ__ nullptr)
+    {
+        std::cerr << "Out of memory !";
+        return ERROR;
+    }
 
     // Prepare the hash table for entries.
     operation->MarkUpHashTable(table);
