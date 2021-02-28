@@ -124,7 +124,7 @@ int main()
         }
     }
 
-    delete[] operation;
+    delete operation;
     delete[] table;
     return 0;
 }
