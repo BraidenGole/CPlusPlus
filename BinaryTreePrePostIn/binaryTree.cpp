@@ -60,7 +60,7 @@ LeafNode* BinaryTree::GrowNewLeaf(LeafNode* rootOfTree, char data)
             }
         } while (rootOfTree __NEQ__ NULL);
     }
-    return ZERO;
+    return newLeaf;
 }
 void BinaryTree::InOrderTraversal(LeafNode* rootOfTree)
 {   
